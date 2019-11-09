@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "teamuser",
-    "password": "1234!",
+    "username": "marcus",
+    "password": "1234",
     "database": "devstate_db",
-    "host": "marcus",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
