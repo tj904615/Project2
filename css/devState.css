@@ -1,0 +1,317 @@
+/* ---------------------------------------------------------------
+------------------  Default Element Styling ----------------------
+--------------------------------------------------------------- */
+body, p {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+h1 {
+    font-size: 60px;
+    line-height: 80px;
+    padding: 20px;
+}
+h2 {
+    font-size: 48px;
+    line-height: 62px;
+}
+h3 {
+    font-size: 36px;
+    line-height: 48px;
+}
+img {
+    height: initial;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------------------------------------------------------
+------------------  App-wide custom styling  -------------------------------
+--------------------------------------------------------------- */
+.greyRound {
+    background: #eaeaea;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 40px;
+}
+i {
+    font-family: 'Montserrat','Helvetica Neue','Raleway',Arial, Helvetica, sans-serif;
+    background: orange;
+    text-align: center;
+    line-height: 0px;
+    padding: 5px 22px;
+    color: #FFF;
+    border-radius: 100px;
+    text-shadow: 3px 3px 0px darkorange;
+    border: 2px solid #FFF;
+    margin-right: 30px;
+    margin-left: -5px;
+    font-size: 36px;
+}
+.statusMessage {
+    width: 100%;
+    border-radius: 20px;
+    background: #FFF;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.welcomeText {
+    display: flex;
+    color: #999;
+    background: #eaeaea;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: -15px;
+    align-content: flex-end;
+    justify-content: end;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+/* ---------------------------------------------------------------
+------------------  mainNav section  -------------------------------
+--------------------------------------------------------------- */
+
+.mainNav {
+    text-align: center;
+    border-bottom: 5px solid #CCC;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+}
+.devState_mainNavLogo {
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: 7px;
+}
+
+/* ---------------------------------------------------------------
+------------------  subNav sections  -------------------------------
+--------------------------------------------------------------- */
+.subNav {
+    padding: 100px 40px;
+    min-height: 75vh;
+}
+h2.breadcrumbs {
+    font-size: 2rem;
+    color: #999;
+    padding-left: 20px;
+}
+#projectNameHeading {
+    font-size: 2.5rem;
+    padding: 0px 0px 0px 10px;
+    line-height: 4.25rem;
+}
+
+/* ---------------------------------------------------------------
+------------------  Forms  -------------------------------
+--------------------------------------------------------------- */
+
+/* --- .home_loginForm ---------------------------------------- */
+.home_loginForm {
+    max-width: 450px;
+    margin: 0px auto;
+    position: relative;
+    top: 150px;
+    z-index: 4;
+}
+#registerTrigger {
+    color: #FFF;
+    text-shadow: 0px 0px 10px #000;
+    text-align: center;
+    display: block;
+    margin: 30px auto 0px;
+    text-decoration: underline;
+}
+.home_loginForm .btn.btn-primary {
+     width: 100%;
+}
+
+/* --- .createProjectModal --------------------------------- */
+.createProjectModal {
+    width: 480px;
+    background: #FFF;
+    max-width: 100%;
+    margin: 0px auto;
+    border: 1px solid #999;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+.modalOverlay {
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 3;
+    display: none;
+    -webkit-transition: display 5s;
+    transition: display 5s;
+}
+
+/* ---------------------------------------------------------------
+------------------  mainFooter section  -------------------------------
+--------------------------------------------------------------- */
+.mainFooter {
+    width: 100%;
+    background: #333;
+    padding: 30px;
+    bottom: 0px;
+    border-top: 5px solid #999;
+    z-index: 2;
+}
+.mainFooter .footerLinks a, .mainFooter img{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    max-height: 100%;
+    color: #ccc;
+    line-height: 36px;;
+}
+.mainFooter img {
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------------------
+------------------  buttons  -------------------------------
+--------------------------------------------------------------- */
+.btn.btn-primary, a.btn.btn-primary{
+    background: #105BB2;
+    color: #eaeaea;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+    transition: all .5s;
+    }
+    .btn.btn-primary:hover, a.btn.btn-primary:hover {
+        color: #FFF;
+        background: #000;
+        transform: translateY(3px);
+        box-shadow: none;
+    }
+
+
+/* ---------------------------------------------------------------
+------------------  Home Page Specific  -------------------------------
+--------------------------------------------------------------- */
+.bodyWrap{
+    background: url(../img/devState_bkgrd.jpg) center center #000;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* ---------------------------------------------------------------
+------------------ Projects Page Specific   -------------------------------
+--------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------
+------------------  Project Page Specific  -------------------------------
+--------------------------------------------------------------- */
+.createTaskForm {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+}
+.createTaskForm .btn {
+    margin-top: 20px;
+}
+
+/* -- New Task Styling -------------------------------- */
+.newTaskItem {
+  padding: 20px;
+  background:  #FFF;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.newTaskItem .taskStatus {
+  position: relative;
+  top: -120px;
+  left: 0px;
+  float: right;
+  color: #FFF;
+}
+.taskStatus {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.Backlog {
+  background: #666;
+}
+.To.Do {
+  background: green;
+}
+.taskStatus.Active {
+  background: blue;
+}
+.On.Hold {
+  background: red;
+}
+.Complete {
+  background: black;
+}
+.newTaskItem h4::before {
+  content: 'Task Title: ';
+  color: #999;
+}
+.newTaskAsignee::before {
+  content: 'Assigned To: ';
+  color: #999;
+}
+.newDueBy::before {
+  content: 'Due By: ';
+  color: #999;
+}
+
+/* ---------------------------------------------------------------
+------------------  Animation  -------------------------------
+--------------------------------------------------------------- */
+.devState_mainNavLogo{
+  -webkit-animation: cursorBlink 1s;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: 100; /* Safari 4.0 - 8.0 */
+  animation: cursorBlink 1s;
+  animation-iteration-count: 100;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cursorBlink {
+  from {box-shadow: -1px 0px 0px #eaeaea;}
+  to {box-shadow: none;}
+}
+
+@keyframes cursorBlink {
+  from {box-shadow: -1px 0px 0px #eaeaea    ;}
+  to {box-shadow: none;}
+}
+
+
+/* ---------------------------------------------------------------
+------------------  Media Queries  -------------------------------
+--------------------------------------------------------------- */
+
+@media screen and (max-width: 780px) {
+    .mainFooter {
+        padding-top: 15px;
+    }
+    .mainFooter img {
+        max-width: 130px;
+        margin-bottom: 10px;
+    }
+    .mainFooter .footerLinks a {
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .home_loginForm {
+        top: 100px;
+    }
+}

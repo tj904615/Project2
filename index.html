@@ -1,8 +1,56 @@
 <html lang="us-en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>devState - Modern Task Management</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/devState.css" />
     </head>
     <body>
-        <h1>Test File - First Branch - SLF</h1>
+        <div class="bodyWrap">
+            <section class="mainNav">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="devState_mainNavLogo" src="img/devState_mainNavLogo.jpg" alt="devState - Modern Task Management"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subNav">
+                <div class="home_loginForm">
+                    <div class="container-fluid">
+                        <form id="devStateLogin" action="projects.html">
+                            <div class="form-group">
+                                <!-- Label (we're using the placeholder instead) -- <label for="exampleInputEmail1">Email address</label> -->
+                                <input type="email" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Enter email">
+                                <!-- Login Note -- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+                            <div class="form-group">
+                            <!-- Label (we're using the placeholder instead) -- <label for="exampleInputPassword1">Password</label> -->
+                                <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                            </div>
+                            <button type="submit" id="devStateLoginBtn" class="btn btn-primary">LOGIN</button>
+                        </form>
+                        <a href="#" id="registerTrigger">Don't have an account? Register here.</a>
+                    </div>
+                </div>
+            </section>
+            <section class="mainFooter">
+                <div class="footerLinks">
+                    <a href="#" ><img src="img/devState_footerLogo.png" /></a>
+                    <a href="#" >README.md</a>
+                    <a href="#" >GitHub Repository</a>
+                    <a href="#" >Dev Team</a>
+                </div>
+            </section>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/devState.js" defer></script>
     </body>
 </html>
