@@ -1,0 +1,88 @@
+<html lang="us-en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>devState - Modern Task Management</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/devState.css" />
+    </head>
+    <body>
+        <section class="mainNav">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="index.html">
+                            <img class="devState_mainNavLogo" src="img/devState_mainNavLogo.jpg" alt="devState - Modern Task Management"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subNav">
+            <div class="container">
+                <div class="row">
+                    <p class="welcomeText">Logged in as: <span style="font-weight:bold" id="userName"></span></p><br>
+                </div>
+                <div class="row">
+                    <h2 class="breadcrumbs">.project(s) > </h2> 
+                    <h1 id="projectNameHeading"> </h1>
+                    <div class="col-md-12 greyRound">
+                        <h3 class="statusMessage"><i>!</i>This project doesn't have any tasks. <b>Add your first task below.</b></h3>
+                        <div id="taskContainer">
+
+                        </div>
+                        <form class="createTaskForm" action="project.html"> 
+                            <h3>Add a Task</h3>           
+                            <div class="form-group">
+                                <label for="taskNameInput">Task Title</label>
+                                <input type="text" class="form-control" id="taskNameInput" aria-describedby="taskName" placeholder="Task Title">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+                            <div class="form-group">
+                                <label for="asigneeInput">Assigned to</label>
+                                <select class="form-control" id="asignee">
+                                    <option>Stephen Fox</option>
+                                    <option>Marcus Kelly</option>
+                                    <option>TJ Bryant</option>
+                                    <option>Chase Cannon</option>
+                                    <option>Guest</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskStatus">Starting Task Status</label>
+                                <select class="form-control" id="taskStatus">
+                                    <option>Backlog</option>
+                                    <option>To Do</option>
+                                    <option>Active</option>
+                                    <option>On Hold</option>
+                                    <option>Complete</option>
+                                </select>
+                            </div>
+                            <div class="form-group date" for="taskDate">
+                                <label for="taskDate">Due Date</label>
+                                <input type="text" id="taskDate" class="form-control" placeholder="11/10/19">
+                            </div>
+                            <button type="submit" class="btn btn-primary saveTask">Save Task + </button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <section class="mainFooter">
+            <div class="footerLinks">
+                <a href="#" ><img src="img/devState_footerLogo.png" /></a>
+                <a href="README.md" target="_blank" >README.md</a>
+                <a href="https://github.com/tj904615/Project2" target="_blank" >GitHub Repository</a>
+                <a href="team.html" >Dev Team</a>
+            </div>
+        </section>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/devState.js" defer></script>
+    </body>
+</html>
