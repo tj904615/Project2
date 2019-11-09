@@ -13,12 +13,12 @@
                     <h3>Create a Project</h3>           
                     <div class="form-group">
                         <label for="projectNameInput">Project Name</label>
-                        <input type="text" class="form-control" id="projectNameInput" aria-describedby="projectName" placeholder="Project Name">
+                        <input type="text" class="form-control" id="projectNameInput" aria-describedby="projectName" placeholder="Project Name" required>
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
                         <label for="contributorInput">Add a Contributor</label>
-                        <select class="form-control" id="projectContributor">
+                        <select class="form-control" id="projectContributor" required>
                             <option>Stephen Fox</option>
                             <option>Marcus Kelly</option>
                             <option>TJ Bryant</option>
@@ -43,6 +43,9 @@
         </section>
         <section class="subNav">
             <div class="container">
+                 <div class="row">
+                    <p class="welcomeText">Logged in as: <span style="font-weight:bold" id="userName"></span></p><br>
+                </div>
                 <div class="row">
                     <h1>.project(s)</h1>
                     <div class="col-md-12 greyRound">

@@ -24,7 +24,7 @@
                     <p class="welcomeText">Logged in as: <span style="font-weight:bold" id="userName"></span></p><br>
                 </div>
                 <div class="row">
-                    <h2 class="breadcrumbs">.project(s) > </h2> 
+                    <h2 class="breadcrumbs"><a href="projects.html">.project(s)</a> > </h2> 
                     <h1 id="projectNameHeading"> </h1>
                     <div class="col-md-12 greyRound">
                         <h3 class="statusMessage"><i>!</i>This project doesn't have any tasks. <b>Add your first task below.</b></h3>
@@ -35,12 +35,12 @@
                             <h3>Add a Task</h3>           
                             <div class="form-group">
                                 <label for="taskNameInput">Task Title</label>
-                                <input type="text" class="form-control" id="taskNameInput" aria-describedby="taskName" placeholder="Task Title">
+                                <input type="text" class="form-control" id="taskNameInput" aria-describedby="taskName" placeholder="Task Title" required>
                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
                             <div class="form-group">
                                 <label for="asigneeInput">Assigned to</label>
-                                <select class="form-control" id="asignee">
+                                <select class="form-control" id="asignee" required>
                                     <option>Stephen Fox</option>
                                     <option>Marcus Kelly</option>
                                     <option>TJ Bryant</option>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="taskStatus">Starting Task Status</label>
-                                <select class="form-control" id="taskStatus">
+                                <select class="form-control" id="taskStatus" required>
                                     <option>Backlog</option>
                                     <option>To Do</option>
                                     <option>Active</option>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="form-group date" for="taskDate">
                                 <label for="taskDate">Due Date</label>
-                                <input type="text" id="taskDate" class="form-control" placeholder="11/10/19">
+                                <input type="text" id="taskDate" class="form-control" placeholder="12/31/99" required>
                             </div>
                             <button type="submit" class="btn btn-primary saveTask">Save Task + </button>
                         </form>

@@ -98,6 +98,9 @@ h2.breadcrumbs {
     color: #999;
     padding-left: 20px;
 }
+h2.breadcrumbs a {
+    color: #999;
+}
 #projectNameHeading {
     font-size: 2.5rem;
     padding: 0px 0px 0px 10px;
