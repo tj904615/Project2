@@ -91,14 +91,13 @@
             name: $("#projectNameInput").val().trim()
         }
         $.get("/api/" + username, function(data){
-            console.log(data);
+            
             projectData.id = data
         }).then(function(){
           $.post("/api/projects", projectData, function(data){
-           alert("creating project");
+            document.location.href = "/project";
     });
         })
-        console.log(projectData)
         
         //creates post from form data gathered from user
     //  $.post("/api/projects", projectData, function(data){

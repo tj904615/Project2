@@ -49,7 +49,7 @@
             
             // creates post from form data gathered from user
         $.post("/api/signup", userData, function(data){
-           alert("creating user");
+            document.location.href = "/";
         });
       }else (alert("Please fill out all fields!"));
     })</script>

@@ -21,7 +21,7 @@ $('.createProjectBtn').on('click', function() {
 });
 
 /* -- I'm setting an incrementing variable to '0' so I can store more than one property/value set in local storage. Each set of values will be numbered 0 ++ - SLF -- */
-var i = 0;
+
 
 /* -- Once the modal fires, and after users enter their data, the inputs are assigned to variables, and stored to local storage. - SLF -- */
 $('.saveProject').on('click', function() {
@@ -35,16 +35,16 @@ $('.saveProject').on('click', function() {
     
  /* Since the Database isn't set up yet, I am storing the user input into local storage. This will allow retreival of the data from page to page,
     while also making flipping to the database simpler - SLF */   
-    i++
-    localStorage.setItem('newProject'+i, newProject);
-    localStorage.setItem('newContributor'+i, contributor); 
-});
+    
+    localStorage.setItem('newProject', newProject);
+    localStorage.setItem('newContributor', contributor); 
+})
 
 // PROJECT PAGE - ADD A TASK FORM ----------------------------------------------------- //
 function getUserId () {
     var userNameDisplay = localStorage.getItem('projectOwner');
     document.getElementById('userName').innerHTML = userNameDisplay;
-    var projectName = localStorage.getItem('newProject1');
+    var projectName = localStorage.getItem('newProject');
     document.getElementById('projectNameHeading').innerHTML = projectName;
 }
 getUserId();

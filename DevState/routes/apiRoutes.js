@@ -18,6 +18,14 @@ module.exports = function(app) {
       res.json(dbUser.id)
     })
   })
+  app.get("/api/projects/:projectname", function(req,res){
+
+    db.Project.findOne({
+      where: {name: req.params.projectname}
+    }).then(function(dbProject){
+      res.json(dbProject.id)
+    })
+  })
 
   // Create a new example
   app.post("/api/signup", function(req, res) {
@@ -36,6 +44,17 @@ module.exports = function(app) {
       UserId: req.body.id
     }).then(function(dbProject) {
       res.json(dbProject);
+    });
+  });
+  app.post("/api/tasks", function(req, res) {
+    console.log(req.body)
+    db.Task.create({
+      name: req.body.name,
+      description: req.body.description,
+      status: req.body.status,
+      ProjectId: req.body.id
+    }).then(function(dbTask) {
+      res.json(dbTask);
     });
   });
 
