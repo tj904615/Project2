@@ -272,7 +272,7 @@ h2.breadcrumbs a {
   color: #999;
 }
 .newDueBy::before {
-  content: 'Due By: ';
+  content: 'Description: ';
   color: #999;
 }
 
