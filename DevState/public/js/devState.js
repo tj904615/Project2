@@ -6,7 +6,7 @@ $('#devStateLoginBtn').on('click',function(){
     var userId = document.getElementById('userId').value;
     var userPassword = document.getElementById('userPassword').value;
     localStorage.setItem('projectOwner', userId);
-    localStorage.setItem('userPassword', userPassword);    
+    localStorage.setItem('userPassword', userPassword); 
 });
 
 // PROJECT PAGE - CREATE PROJECT FORM ----------------------------------------------------- //
@@ -14,6 +14,10 @@ $('#devStateLoginBtn').on('click',function(){
 $('.createProjectBtn').on('click', function() {
     var modal = $('.modalOverlay');
     $(modal).show(500);
+    
+    var username = localStorage.getItem('projectOwner')
+    $("#user-name").val(username);
+
 });
 
 /* -- I'm setting an incrementing variable to '0' so I can store more than one property/value set in local storage. Each set of values will be numbered 0 ++ - SLF -- */
@@ -26,6 +30,8 @@ $('.saveProject').on('click', function() {
     $(modal).css('display','none');
     var newProject = document.getElementById('projectNameInput').value;
     var contributor = document.getElementById('projectContributor').value;
+    
+    
     
  /* Since the Database isn't set up yet, I am storing the user input into local storage. This will allow retreival of the data from page to page,
     while also making flipping to the database simpler - SLF */   

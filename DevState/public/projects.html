@@ -9,7 +9,7 @@
     <body>
         <div class="modalOverlay">
             <div class="createProjectModal">
-                <form class="createProjectForm" action="project.html"> 
+                <form class="createProjectForm" action="/project"> 
                     <h3>Create a Project</h3>           
                     <div class="form-group">
                         <label for="projectNameInput">Project Name</label>
@@ -52,6 +52,7 @@
                         <h3 class="statusMessage"><i>!</i>You don't currently have any projects.</h3>
                         <a class="createProjectBtn btn btn-primary">+ Create a Project</a> 
                     </div>
+                    <input type="text" id="user-name" style="display:none"></input>
                 </div>
             </div>    
         </section>
@@ -70,5 +71,41 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="js/devState.js" defer></script>
+        <script type="text/javascript">
+        $(".saveProject").on("click", function(){
+        event.preventDefault();
+    function validate(){
+        var isValid = true;
+        // checks username input
+        if ($("#projectNameInput").val().trim() === ""){
+            
+         isValid = false;
+    }
+        return isValid;
+    }
+        
+    if (validate()){
+        var username = $("#user-name").val()
+
+        var projectData = {
+            name: $("#projectNameInput").val().trim()
+        }
+        $.get("/api/" + username, function(data){
+            console.log(data);
+            projectData.id = data
+        }).then(function(){
+          $.post("/api/projects", projectData, function(data){
+           alert("creating project");
+    });
+        })
+        console.log(projectData)
+        
+        //creates post from form data gathered from user
+    //  $.post("/api/projects", projectData, function(data){
+    //    alert("creating project");
+    // });
+  }else (alert("Please fill out all fields!"));
+        })
+        </script>
     </body>
 </html>
