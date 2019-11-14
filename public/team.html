@@ -1,0 +1,111 @@
+<html lang="us-en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>devState - Modern Task Management</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/devState.css" />
+    </head>
+    <body>
+        <div class="bodyWrap">
+            <section class="mainNav">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="index.html"><img class="devState_mainNavLogo" src="img/devState_mainNavLogo.jpg" alt="devState - Modern Task Management"/></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subNav">
+                <div class="container-fluid">
+                    <div class="row teammates">
+                        <div class="col-md-3">
+                            <img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/48376158_2103543029707167_4298319500794658816_n.jpg?_nc_cat=105&_nc_oc=AQkiEnOg5iObytkFx4WdKTyYE47H_pdzBGG-WuTWdiHo6GA1uzjHLaA-yOqs8t6j4nI&_nc_ht=scontent-ort2-2.xx&oh=6a8e458063d469f1d5e39d22acf666a6&oe=5E585D75" alt="The Man &ndash; Marcus Kelly"/>
+                            <h5><span>"Making His Mark"</span><br> Marcus Kelly</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-1/p320x320/18056021_10212758986630413_507457938956121877_o.jpg?_nc_cat=109&_nc_oc=AQkt0oWyVzmfPEV12GXnOgU6i-i5xyJV2Z9mnf9iZkhpFdNWiNSRoyIhRfS9LHtPvSU&_nc_ht=scontent-ort2-2.xx&oh=7de43a516a0048a1c85f04b1068e00bf&oe=5E48420A" alt="Stephen Fox"/>
+                            <h5><span>"Older Than Richard K."</span><br> Stephen Fox</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://ca.slack-edge.com/TK2V5J23C-UKXKDDABY-0b8977318eb0-512" alt="Terrance Bryant"/>
+                            <h5><span>"Chill-In-Crisis"</span><br> Terrance Bryant</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://ca.slack-edge.com/TK2V5J23C-UL435DJBD-g24b275a2765-512" alt="Chase Cannon"/>
+                            <h5><span>"Whatever You Guys Need Me To Do"</span><br> Chase Cannon</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mainFooter">
+                <div class="footerLinks">
+                    <a href="#" ><img src="img/devState_footerLogo.png" /></a>
+                    <a href="#" >README.md</a>
+                    <a href="#" >GitHub Repository</a>
+                    <a href="#" >Dev Team</a>
+                </div>
+            </section>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/devState.js" defer></script>
+        <script type="text/javascript">
+            $("#devStateLoginBtn").on("click", function(event){
+            event.preventDefault();
+            function validate(){
+                var isValid = true;
+                // checks username input
+                if ($(".form-control").val().trim() === ""){
+                    
+                 isValid = false;
+            }
+                return isValid;
+            }
+                
+            if (validate()){
+                var userData = {
+                    username: $(".username").val().trim(),
+                    password: $(".password").val().trim()
+                }
+                
+                // creates post from form data gathered from user
+            $.get("/api/login", function(data){
+
+              function userCheck(){
+              var isUsername = true
+              for (var i=0;i<data.length;i++){
+              if (userData.username === data[i].username) {
+                   return isUsername = true
+              }else{isUsername = false}
+            }
+            return isUsername
+        }
+
+            function passCheck(){
+              var isPassword = true
+              for (var i=0;i<data.length;i++){
+              if (userData.password === data[i].password){
+                  return isPassword = true
+              }else{isPassword = false}
+            }
+              return isPassword
+            }
+
+            if (userCheck() && passCheck() == true){
+                document.location.href = "/projects";
+            }else{alert("Invalid username or password")}
+            });
+        
+          }else (alert("Please fill out all fields!"));
+        })</script>
+    </body>
+</html>
+
+
+

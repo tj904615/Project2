@@ -211,9 +211,34 @@ h2.breadcrumbs a {
 }
 
 /* ---------------------------------------------------------------
------------------- Projects Page Specific   -------------------------------
+------------------ Teammates Page Specific   -------------------------------
 --------------------------------------------------------------- */
-
+.teammates h5{
+    font-size: 28px;
+    text-align: center;
+    color:#333;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 7px;
+    margin-top: -50px;
+    z-index: 6;
+    position: relative;
+}
+.teammates img {
+    border-radius: 200px;
+    border: 3px solid #FFF;
+    margin-bottom: 10px;
+    max-width: 250px;
+    margin: 20px auto;
+    height: auto;
+    text-align: center;
+    display: block;
+}
+.teammates h5 span{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
 
 
 /* ---------------------------------------------------------------
