@@ -1,32 +1,73 @@
-# Project Name
-DevState
-
+# Project Name: DevState
+-----------
 ## Description
-One or two sentences summarizing your project. This should be more
-interesting than technical.
+<b>What is DevState?</b>
+Eliminate hassle from daily task management. Designed for project leads and contributors, DevState presents a clear, easy to understand interface and method to keep teams coordinated.
+
+----------
 
 ## Motivation
-Two or three sentences describing the problem the project solves.
+<b>Why did we build this app?</b>
+Task management has become too complex. 
+Inspired by project management tools like github, basecamp, and monday.com, our team wanted to implement the MVP for a task management application.
+
+------------
 
 ## Results
-One or two sentences describing the end result—in other words.
+<b>How did it turn out?</b>
+The current DevState app achieves functionality and simplicity.
+The current DevState implementation features:
+<ul><li>Authenticated Login</li>
+    <li>Get, Put, Read MySQL functionality</li>
+    <li>Dynamic UI</li>
+    <li>Node implementation</li></ul>
+
+-----------
 
 ## Team Efforts
-Describe how you delegated work amongst your team members.
+<b>Delegate & Conquer</b>
+<i>DevState was a fully collaborative endeavor.</i>
+Together, the team contributed concepts and chose this project for our application. Each team member gave input on names, implementation, data structure, and interface. Marcus Kelly contributed express routing, server logic, and database interaction. Stephen Fox contributed HTML/CSS, JQuery, and presentation. TJ Bryant and Chase Cannon established schema structure, repo management, and presentation notes.
+
+---------------
 
 ## Individual Responsibilities.
-Describe what you contributed to the project as an
-individual—in other words, the parts of the project that you were accountable for.
+<h3>Marcus Kelly</h3>
+Back-end Supervisor
+<ul><li>Server Logic</li>
+    <li>Routing</li>
+    <li>Create and Read Database Queries</li></ul>
+<h3>Stephen Fox</h3>
+Front-end
+<ul><li>Wireframes</li>
+    <li>HTML/CSS</li>
+    <li>JQuery / Value Capture</li></ul>
+
+<h3>TJ Bryant</h3>
+Database + GitHub
+<ul><li>Repo Management</li>
+    <li>Schema</li>
+    <li>Database Creation</li></ul>
+
+<h3>Chase Cannon</h3>
+Database / Schema
+    <ul><li>Repo Management</li>
+    <li>Schema</li>
+    <li>Database Strategy</li></ul>
+
+----------
 
 ### Challenges
-Describe any challenges you and/or your team encountered
-that you personally played an important role in resolving.
+<b>Overcoming the Unexpected</b>
+Managing tasks, commits, and workload always presents a challenge. From a technical standpoint, user authentication and database queries presented the biggest hurdles. On an inter-personal level — it’s always difficult to coordinate the schedule of four individuals.
+
+--------
 
 ## Improvements
-Describe changes you would make going forward. These can be
-changes you’d make for better scalability; additional features you’d add; improvements
-you’d make to the codebase; etc.
-
-## DELETE THIS SECTION
-After compiling this information for each project, use it to rehearse your answer to the question:
-_“Tell me about a technical project you’ve worked on”_. You should be able to cover the first three points in less than **45 seconds**, and summarize the last three in **approximately a minute**. You should, however, be able to further elaborate on improvements; challenges; and individual responsibilities if prompted.
+<b>What’s Next?</b>
+DevState has a lot of extensability.
+A few features we’ve discussed include:
+<ul><li>Inclusion of a Kanban board view</li>
+    <li>Project and Task level commenting</li>
+    <li>Email or SMS notifications</li></ul>
+ 
